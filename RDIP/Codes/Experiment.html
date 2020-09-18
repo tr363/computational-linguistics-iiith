@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<meta charset="utf-8" />
 <title>Virtual Labs</title><link rel = "icon" href =  
 "https://www.vlab.co.in/images/logo.jpg" 
         type = "image/x-icon"> 
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css
-" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 
 <style>
 h1{
@@ -59,13 +59,13 @@ div.gr {
 div.totb {
   background-color: #e4f2fd;
   width: 1024px;
-  height: 600px;
+  height: 900px;
 }
 div.totb1{
 
   background-color: #ffffff;
   width: 950px;
-  height: 437px;
+  height: 737px;
   margin: auto;
   box-shadow: 10px 10px 100px 10px gray;
 }
@@ -141,6 +141,9 @@ p.bl{
 color: blue;
 }
 
+button.order {
+display: none;
+}
 
 
 </style>
@@ -188,7 +191,7 @@ color: blue;
 
 <h2 align="left">Experiment</h2>
 
-<select  class="se" name="language" id="language">
+<select  onmouseup="eorh()" class="se" name="language" id="language">
     <option value="a">---SELECT LANGUAGE---</option>
     <option value="eng">ENGLISH</option>
     <option value="hin">HINDI</option>
@@ -197,16 +200,96 @@ color: blue;
 
 <p class="bl"><b>Form a sentence (Declarative or Interrogative or any other type) from the given words<b></p>
 <p class="bl"><i>(select the buttons in proper order)</i></p>
-<p id="demo"></p>
+<br>
+<button onclick="mfn()" class="order" id="1" >libraries</button>&nbsp;&nbsp;&nbsp;<button onclick="mfn2()" class="order" id="2">studies</button>&nbsp;&nbsp;&nbsp;<button onclick="mfn3()" class="order" id="3">goes</button>&nbsp;&nbsp;&nbsp;<button onclick="mfn4()" class="order" id="4">the</button>&nbsp;&nbsp;&nbsp;<button onclick="mfn5()" class="order" id="5">and</button>&nbsp;&nbsp;&nbsp;<button onclick="mfn6()" class="order" id="6">to</button>&nbsp;&nbsp;&nbsp;<button onclick="mfn7()" class="order" id="7">John</button>
+<div display="inline-block">
+<p id="de1"></p><p id="de2"></p><p id="de3"></p><p id="de4"></p><p id="de5"></p><p id="de6"></p><p id="de7"></p></div>
 </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="english.js"></script>
+<script src="hindi.js"></script>
+<script>
+var lan;
+var op;
+function eorh() {
+lan = getElementById("language");
+if(lan=="eng")
+op = 100;
+else if(lan=="hin")
+op = 200;
+else
+alert("select a language");
+document.getElementById("demo").innerHTML = op;
+}
 
 
+</script>
+<script>
+$(document).ready(function() { 
+            $("select").click(function() { lan = getElementById("language");
+if(lan=="eng")
+op = 100;
+else if(lan=="hin")
+op = 200;
+else
+alert("select a language");
+document.getElementById("demo").innerText = op;
+            }); 
+        }); 
+</script>
+<script type="text/javascript"> 
 
+        document.getElementById("language").onclick = function() { 
+  
+document.getElementById("1").style.display="inline-block";document.getElementById("2").style.display="inline-block";document.getElementById("3").style.display = "inline-block";             document.getElementById("4").style.display = "inline-block";            document.getElementById("5").style.display = "inline-block";             document.getElementById("6").style.display = "inline-block";            document.getElementById("7").style.display = "inline-block"; 	
+  
+        } 
 
-
-
-
-
+$(document).ready(function() { 
+            $("#1").click(function() { 
+                $("#1").toggle();
+            }); 
+$("#2").click(function() { 
+                $("#2").toggle();
+        }); 
+$("#3").click(function() { 
+                $("#3").toggle();
+        }); 
+$("#4").click(function() { 
+                $("#4").toggle();
+        }); 
+$("#5").click(function() { 
+                $("#5").toggle();
+        }); 
+$("#6").click(function() { 
+                $("#6").toggle();
+        }); 
+$("#7").click(function() { 
+                $("#7").toggle();
+        }); 
+            }); 
+function mfn(){
+document.getElementById("de1").innerHTML = "libraries";
+}
+function mfn2(){
+document.getElementById("de2").innerHTML = "studies";
+}
+function mfn3(){
+document.getElementById("de3").innerHTML = "goes";
+}
+function mfn4(){
+document.getElementById("de4").innerHTML = "the";
+}
+function mfn5(){
+document.getElementById("de5").innerHTML = "and";
+}
+function mfn6(){
+document.getElementById("de6").innerHTML = "to";
+}
+function mfn7(){
+document.getElementById("de7").innerHTML = "John";
+}
+</script>
 
 
 </div>
