@@ -148,6 +148,7 @@ div.ex3 {
   overflow: auto;
 }
 
+
 </style>
 </head>
 <body>
@@ -209,9 +210,11 @@ div.ex3 {
 <p id="de1"></p><p id="de2"></p><p id="de3"></p><p id="de4"></p><p id="de5"></p><p id="de6"></p><p id="de7"></p></div>
 </div>
 <div align="center">
-<button onclick="nfn()">Re-form the sentence</button><br>
-<button onclick="ofn()">Check correctness of the sentence</button>
+<button class="order" id="reform" onclick="nfn()">Re-form the sentence</button><br>
+<button class="order" id="correctness" onclick="ofn()">Check correctness of the sentence</button>
 <p id="otpt"></p>
+<button class="order" id="getcorrect" onclick="pfn()">Get correct sentence</button>
+<p id="asd"></p>
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -275,6 +278,8 @@ $("#6").click(function() {
         }); 
 $("#7").click(function() { 
                 $("#7").toggle();
+		document.getElementById("reform").style.display="inline-block";
+		document.getElementById("correctness").style.display="inline-block";
         }); 
             }); 
 function mfn(){
@@ -306,8 +311,11 @@ document.getElementById("1").style.display="inline-block";document.getElementByI
 function ofn(){
 
   
-document.getElementById("1").style.display="inline-block";document.getElementById("2").style.display="inline-block";document.getElementById("3").style.display = "inline-block";             document.getElementById("4").style.display = "inline-block";            document.getElementById("5").style.display = "inline-block";             document.getElementById("6").style.display = "inline-block";            document.getElementById("7").style.display = "inline-block";document.getElementById("de1").innerHTML = ""; 	document.getElementById("de2").innerHTML = "";document.getElementById("de3").innerHTML = "";document.getElementById("de4").innerHTML = "";document.getElementById("de5").innerHTML = "";document.getElementById("de6").innerHTML = "";document.getElementById("de7").innerHTML = "";document.getElementById("otpt").innerHTML = "WRONG ANSWER!";
+document.getElementById("1").style.display="inline-block";document.getElementById("2").style.display="inline-block";document.getElementById("3").style.display = "inline-block";             document.getElementById("4").style.display = "inline-block";            document.getElementById("5").style.display = "inline-block";             document.getElementById("6").style.display = "inline-block";            document.getElementById("7").style.display = "inline-block";document.getElementById("de1").innerHTML = ""; 	document.getElementById("de2").innerHTML = "";document.getElementById("de3").innerHTML = "";document.getElementById("de4").innerHTML = "";document.getElementById("de5").innerHTML = "";document.getElementById("de6").innerHTML = "";document.getElementById("de7").innerHTML = "";document.getElementById("otpt").innerHTML = "WRONG ANSWER!";document.getElementById("getcorrect").style.display="inline-block";
 
+}
+function pfn(){
+document.getElementById("asd").innerHTML = "1.John ate an apple before afternoon <br/> 2.before afternoon John ate an apple <br/> 3.John before afternoon ate an apple";
 }
 </script>
 
