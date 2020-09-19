@@ -144,7 +144,9 @@ color: blue;
 button.order {
 display: none;
 }
-
+div.ex3 {
+  overflow: auto;
+}
 
 </style>
 </head>
@@ -202,9 +204,14 @@ display: none;
 <p class="bl"><i>(select the buttons in proper order)</i></p>
 <br>
 <button onclick="mfn()" class="order" id="1" >libraries</button>&nbsp;&nbsp;&nbsp;<button onclick="mfn2()" class="order" id="2">studies</button>&nbsp;&nbsp;&nbsp;<button onclick="mfn3()" class="order" id="3">goes</button>&nbsp;&nbsp;&nbsp;<button onclick="mfn4()" class="order" id="4">the</button>&nbsp;&nbsp;&nbsp;<button onclick="mfn5()" class="order" id="5">and</button>&nbsp;&nbsp;&nbsp;<button onclick="mfn6()" class="order" id="6">to</button>&nbsp;&nbsp;&nbsp;<button onclick="mfn7()" class="order" id="7">John</button>
-<div display="inline-block">
+<p class="bl" align="center"><b>Formed Sentence</b><i>(after selecting words)</i>:</p> 
+<div class="ex3">
 <p id="de1"></p><p id="de2"></p><p id="de3"></p><p id="de4"></p><p id="de5"></p><p id="de6"></p><p id="de7"></p></div>
 </div>
+<div align="center">
+<button onclick="nfn()">Re-form the sentence</button>
+</div>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="english.js"></script>
 <script src="hindi.js"></script>
@@ -288,6 +295,11 @@ document.getElementById("de6").innerHTML = "to";
 }
 function mfn7(){
 document.getElementById("de7").innerHTML = "John";
+}
+function nfn(){
+  
+document.getElementById("1").style.display="inline-block";document.getElementById("2").style.display="inline-block";document.getElementById("3").style.display = "inline-block";             document.getElementById("4").style.display = "inline-block";            document.getElementById("5").style.display = "inline-block";             document.getElementById("6").style.display = "inline-block";            document.getElementById("7").style.display = "inline-block";document.getElementById("de1").innerHTML = ""; 	document.getElementById("de2").innerHTML = "";document.getElementById("de3").innerHTML = "";document.getElementById("de4").innerHTML = "";document.getElementById("de5").innerHTML = "";document.getElementById("de6").innerHTML = "";document.getElementById("de7").innerHTML = "";
+
 }
 </script>
 
