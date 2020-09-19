@@ -59,19 +59,22 @@ div.gr {
 div.totb {
   background-color: #e4f2fd;
   width: 1024px;
-  height: 600px;
+  height: 1000px;
 }
 div.totb1{
 
   background-color: #ffffff;
   width: 950px;
-  height: 437px;
+  height: 837px;
   margin: auto;
   box-shadow: 10px 10px 100px 10px gray;
 }
 
 
-
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
 
 ul.o{
 
@@ -141,7 +144,12 @@ p.bl{
 color: blue;
 }
 
-
+div.xed{
+display: none;
+}
+p.cxd{
+color: red;
+}
 
 </style>
 </head>
@@ -188,23 +196,54 @@ color: blue;
 
 <h2 align="left">Experiment</h2>
 
-<select  class="se" name="language" id="language">
+<select  class="se" name="corpus" id="corpus">
     <option value="a">---Select a corpus---</option>
     <option value="1">Corpus 1</option>
     <option value="2">Corpus 2</option>
     <option value="3">Corpus 3</option>
   </select><br>
 
+<div align="center" id="xed" class="xed">
+<p>A mouse was having a very bad time. She could find no food at all. She looked here and there, but there was no food, and she grew very thin. At last the mouse found a basket, full of corn. There was a small hole in the basket, and she crept in. She could just get through the hole. Then she began to eat the corn. Being very hungry, she ate a great deal, and went on eating and eating. She had grown very fat before she felt that she had had enough. When the mouse tried to climb out of the basket, she could not. She was too fat to pass through the hole. " How shall I climb out?" said the mouse. "oh, how shall I climb out?" Just then a rat came along, and he heard the mouse. "Mouse," said the rat, "if you want to climb out of the basket, you must wait till you have grown as thin as you were when you went in."
+<br>
+<br>
+Enter the number of tokens and types for the above corpus:
+<table style="width:10%">
+  <tr>
+    <th>#tokens</th>
+    <th> <input type="number" name="tokens"></th> 
+    
+  </tr>
+  <tr>
+    <td>#types</td>
+    <td><input type="number" name="types"></td>
+  </tr>
+</table>
+<br>
+<br>
+<button type="submit" id="submit" onclick="fn()">Submit</button>
 
-<p id="demo"></p>
+
+
+<p class="cxd" id="xd" color="red"></p>
+
+
+</div>
 </div>
 
 
 
 
+<script type="text/javascript"> 
 
+document.getElementById("corpus").onclick = function() { 
+document.getElementById("xed").style.display= "inline-block";
+}
+function fn(){
+document.getElementById("xd").innerHTML = "WRONG ANSWER!";
+}
 
-
+</script>
 
 
 
