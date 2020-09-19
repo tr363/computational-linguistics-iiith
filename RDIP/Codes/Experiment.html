@@ -209,7 +209,9 @@ div.ex3 {
 <p id="de1"></p><p id="de2"></p><p id="de3"></p><p id="de4"></p><p id="de5"></p><p id="de6"></p><p id="de7"></p></div>
 </div>
 <div align="center">
-<button onclick="nfn()">Re-form the sentence</button>
+<button onclick="nfn()">Re-form the sentence</button><br>
+<button onclick="ofn()">Check correctness of the sentence</button>
+<p id="otpt"></p>
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -299,6 +301,12 @@ document.getElementById("de7").innerHTML = "John";
 function nfn(){
   
 document.getElementById("1").style.display="inline-block";document.getElementById("2").style.display="inline-block";document.getElementById("3").style.display = "inline-block";             document.getElementById("4").style.display = "inline-block";            document.getElementById("5").style.display = "inline-block";             document.getElementById("6").style.display = "inline-block";            document.getElementById("7").style.display = "inline-block";document.getElementById("de1").innerHTML = ""; 	document.getElementById("de2").innerHTML = "";document.getElementById("de3").innerHTML = "";document.getElementById("de4").innerHTML = "";document.getElementById("de5").innerHTML = "";document.getElementById("de6").innerHTML = "";document.getElementById("de7").innerHTML = "";
+
+}
+function ofn(){
+
+  
+document.getElementById("1").style.display="inline-block";document.getElementById("2").style.display="inline-block";document.getElementById("3").style.display = "inline-block";             document.getElementById("4").style.display = "inline-block";            document.getElementById("5").style.display = "inline-block";             document.getElementById("6").style.display = "inline-block";            document.getElementById("7").style.display = "inline-block";document.getElementById("de1").innerHTML = ""; 	document.getElementById("de2").innerHTML = "";document.getElementById("de3").innerHTML = "";document.getElementById("de4").innerHTML = "";document.getElementById("de5").innerHTML = "";document.getElementById("de6").innerHTML = "";document.getElementById("de7").innerHTML = "";document.getElementById("otpt").innerHTML = "WRONG ANSWER!";
 
 }
 </script>
